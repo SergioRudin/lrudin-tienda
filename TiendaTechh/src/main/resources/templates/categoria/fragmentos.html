@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
-    <head th:replace="~{general/plantilla :: head}"/>
-
-    <body>
-        <!-- fragmento 1 para Agregar categoria en ventana modal -->
-        
-            <!-- fragmento 1 para Agregar categoria en ventana modal -->
+<!-- fragmento 1 para Agregar categoria en ventana modal -->
 <section th:fragment="agregar">
     <!-- Button trigger modal -->
     <div class='row py-4 mb-2 bg-light'>
@@ -84,7 +75,7 @@
                                                 th:data-bs-descripcion="${categoria.descripcion}">
                                             <i class="fa-solid fa-trash"></i> [[#{accion.eliminar}]]
                                         </button>                                           
-                                        <a th:href="@{/categoria/modificar/}+${c.idCategoria}" class="btn btn-warning">
+                                        <a th:href="@{/categoria/modificar/}+${categoria.idCategoria}" class="btn btn-warning">
                                             <i class="fas fa-pencil-alt"></i> [[#{accion.actualizar}]]
                                         </a>                                                
                                     </td>
@@ -188,7 +179,3 @@
         </div>
     </div>
 </section>
- 
-
-    </body>
-</html>
