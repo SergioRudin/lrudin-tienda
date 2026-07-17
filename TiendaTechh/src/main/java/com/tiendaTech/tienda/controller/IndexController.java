@@ -37,8 +37,8 @@ public class IndexController {
             model.addAttribute("productos", java.util.Collections.emptyList());
         } else {
             var categoria = categoriaOptional.get();
-            //var productos = categoria.getProductos();
-            //model.addAttribute("productos", productos);
+            var productos = categoria.getProductos();
+            model.addAttribute("productos", productos);
         }
         var categorias = categoriaService.getCategorias(true);
         model.addAttribute("categorias", categorias);
